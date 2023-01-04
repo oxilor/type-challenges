@@ -12,7 +12,7 @@ const ref = {
       },
     ],
   },
-}
+} as const
 
 type cases = [
   Expect<Equal<ObjectKeyPaths<{ name: string; age: number }>, 'name' | 'age'>>,

@@ -1,0 +1,5 @@
+type Flatten<T> = T extends [first: infer U, ...rest: infer R]
+  ? U extends any[]
+    ? [...Flatten<U>, ...Flatten<R>]
+    : [U, ...Flatten<R>]
+  : []
